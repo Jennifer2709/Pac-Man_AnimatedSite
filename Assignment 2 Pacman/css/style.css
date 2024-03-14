@@ -1,0 +1,414 @@
+@font-face {
+    font-family: prstartk;
+    src: url(../pacman_assets/prstartk.ttf);
+}
+
+html{
+    scroll-behavior: smooth;
+    font-size: 1.5em;
+    background-color: black;
+    font-family: prstartk;
+    color: white;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+}
+
+.wrapper{
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 3px;
+    margin:auto;
+}
+
+/* NAV & HEADER SECTION */
+
+nav {
+    margin: 0px 0px 80px 500px;
+    padding: 0;
+}
+
+ul li {
+    display: inline;
+    text-align: center;
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 12pt;
+    margin: 0px 0px 0px 20px;
+}
+
+ul li a:hover {
+    transition: .05s;
+    color: #F9ED3F;
+}
+
+.header img{
+    height: 240px;
+    margin: 0 80% 0 30% ;
+    
+}
+
+/* HOME SECTION */
+
+#home{
+    border-bottom: #F9ED3F solid 2px;
+}
+
+#home div {
+    display: inline;
+}
+
+#home h1{
+    text-align: center;   
+    margin-top: 90px;
+    margin-bottom: 200px;
+}
+
+#home img{
+    margin-top: 60px;
+    height: 60px;
+    display: inline;
+}
+
+.images{
+    margin-left: auto;
+}
+
+.images div:nth-child(1){
+    margin-right: auto;
+}
+
+/* HOME SECTION ANIMATION*/
+
+/*PAC-MAN ANIMATION*/
+
+.images div:nth-child(1) img{
+    animation-name: pacman;
+    animation-iteration-count: infinite;
+    animation-duration: 9s;
+    animation-timing-function: linear;
+}
+
+@keyframes pacman {
+    0%{
+        transform: translateX(-50%);
+    }
+
+    50%{
+        transform: translateX(3000%);
+    }
+
+    100% {
+        transform: translateX(-30%);
+    }
+}
+
+/*GHOSTS ANIMATION*/
+
+.images div:nth-child(2) img{
+    transform: scaleX(-1);
+    animation-name: ghosts;
+    animation-iteration-count: infinite;
+    animation-duration: 9s;
+    animation-timing-function: linear;
+}
+
+@keyframes ghosts {
+    0%{
+        transform: translateX(-50%) scaleX(-1);
+    }
+
+    50%{
+        transform: translateX(3000%) scaleX(-1);
+    }
+
+    100% {
+        transform: translateX(0%) scaleX(-1);
+    }
+}
+
+/*HOME TEXT ANIMATION*/
+
+#home h1{
+    animation: blink-animation 1s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1s steps(5, start) infinite;
+    font-size: x-large;
+    color: rgb(255, 255, 255);
+}
+
+@keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+  }
+  
+  @-webkit-keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+}
+
+/* HIGH SCORES SECTION */
+
+#high-scores{
+    border-bottom: #F9ED3F 2px solid;
+}
+
+#high-scores h1{
+    color: #F9ED3F;
+    text-align: center;
+    margin: 100px;
+}
+
+#high-scores h2{
+    text-align: center;
+    font-size: 25px;
+    margin: 50px;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 200PX;
+    width: 50%;
+    text-align: center;
+}
+
+th{
+    height: 90px;
+    width: 400px;
+}
+
+tr{
+    height: 35px;
+    width: 400px;
+}
+
+/*TABLE CONTENT COLOUR STYLE*/
+
+tr:nth-child(2){
+    color: #FFA002;
+}
+
+tr:nth-child(3){
+    color: #FF0401;
+}
+
+tr:nth-child(4){
+    color: #01F8F8;
+}
+
+tr:nth-child(5){
+    color: #FF60B0;
+}
+
+tr:nth-child(6){
+    color: #FFA002;
+}
+
+tr:nth-child(7){
+    color: #FF0401;
+}
+
+tr:nth-child(8){
+    color: #01F8F8;
+}
+
+tr:nth-child(9){
+    color: #FF60B0;
+}
+
+tr:nth-child(10){
+    color: #FFA002;
+}
+
+tr:nth-child(11){
+    color: #FF0401;
+}
+
+/* HOW TO PLAY SECTION */
+
+#how-to-play{
+    margin-bottom: 60px;
+    border-bottom: #F9ED3F 2px solid;
+}
+
+/*HOW TO PLAY PAC-MAN ANIMATION*/
+
+.how-to-play-img{
+    display: flex;
+    margin-top: 10%;
+    animation-name: pacman-2;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+}
+@keyframes pacman-2 {
+    0%{
+        transform: translateX(-50%);
+    }
+
+    50%{
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-30%);
+    }
+}
+
+/*HOW TO PLAY TEXT STYLE*/
+
+.how-to-play-img div:nth-child(1){
+    margin-right: 150px;
+    margin-left: 150px;
+}
+
+#how-to-play img {
+    height: 60px;
+}
+
+#how-to-play h1{
+    text-align: center;
+    margin-left: 350px;
+    margin-right: 350px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+#how-to-play h3{
+    margin-left: 350px;
+    margin-right: 350px;
+    color: #FFD300;
+    text-align: center;
+    margin: 0;
+}
+
+#how-to-play p{
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 0;
+    margin-bottom: 150px;
+    text-align:center;
+    font-size: 20pt;
+}
+
+/* PLAYERS SECTION */
+
+#players {
+    margin-top: 100px;
+    text-align: center;
+    margin-bottom: 200px;
+}
+
+#players img{
+    height: 60px;
+    transform: scaleX(-1);
+    
+}
+
+#players h1{
+    text-align: center;
+}
+
+.players div{
+    display: flex;
+    margin: 0 5% 0 30%;
+    padding: 0;
+}
+
+/*PLAYERS LIST COLOUR STYLE*/
+
+.players div:nth-child(1){
+    color: #FF0401;
+}
+
+.players div:nth-child(2){
+    color:#FF60B0;
+}
+
+.players div:nth-child(3){
+    color:#01F8F8;
+}
+
+.players div:nth-child(4){
+    color:#FFA002;
+}
+
+.players h2{
+    margin-left: 50px;
+    margin-bottom: 80px;
+}
+
+/*POINTS SECTION*/
+
+.points-200{
+    margin-left: 32%;
+    display: flex;
+}
+
+.points-200 div{
+    margin-left: 80px;
+}
+
+.points-200 img{
+    margin-left: 6px;
+}
+
+.points-50{
+    margin-left: 650px;
+    display: flex;
+}
+
+.points-50 div{
+    margin-left: 80px;
+}
+
+.points-10{
+    margin-left: 650px;
+    display: flex;
+}
+
+.points-10 div{
+    margin-left: 90px;
+}
+
+.square1{
+    background-color: #F9ED3F;
+    height: 40px;
+    width: 40px;
+    margin-top: 20px;
+}
+
+.square2{
+    background-color: #F9ED3F;
+    height: 20px;
+    width: 20px;
+    margin-top: 35px;
+}
+
+/*Press start*/
+
+.press-start{
+    font-size: medium;
+    border: solid 1px #FF0401;
+    border-radius: 13px;
+    margin: 10% 30% 0 30%;
+    background-color:#FF0401;
+}
+
+.press-start:hover{
+    transform: scale(1.1);
+    color:rgb(255, 220, 220);
+}
+
+/* Footer */
+
+footer {
+    font-size: small;
+    text-align: center;
+}
